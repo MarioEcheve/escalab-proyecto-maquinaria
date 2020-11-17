@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.escalab.model.Maquina;
@@ -41,6 +43,11 @@ public class MaquinaServiceImpl implements IMaquinaService{
 	public boolean delete(Integer id) {
 		maquinaRepo.deleteById(id);
 		return true;
+	}
+
+	@Override
+	public Page<Maquina> listarPageable(Pageable pageable) {
+		return maquinaRepo.findAll(pageable);
 	}
 
 }
