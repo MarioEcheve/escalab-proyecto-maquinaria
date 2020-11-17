@@ -1,5 +1,9 @@
 package com.escalab.repo;
 
-public interface ITipoMaquinaRepo {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.escalab.model.TipoMaquina;
+
+public interface ITipoMaquinaRepo extends JpaRepository<TipoMaquina, Integer> {
 
 }

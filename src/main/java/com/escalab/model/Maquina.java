@@ -12,7 +12,7 @@ import javax.validation.constraints.Size;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-@ApiModel(description = "Información del Maquina")
+@ApiModel(description = "Información Maquina")
 @Entity
 @Table(name = "maquina")
 public class Maquina {

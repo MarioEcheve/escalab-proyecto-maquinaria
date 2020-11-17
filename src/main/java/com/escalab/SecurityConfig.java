@@ -35,7 +35,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Value("${security.security-realm}")
 	private String securityRealm;
 	
-	/*
+	
 	// beans
 	
 	@Autowired
@@ -100,5 +100,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		defaultTokenServices.setReuseRefreshToken(false);
 		return defaultTokenServices;
 	}
-	*/
+	
 }

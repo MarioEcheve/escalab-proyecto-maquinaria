@@ -28,7 +28,7 @@ public class MenuServiceImpl  implements IMenuService{
 	}
 
 	@Override
-	public List<Menu> listar() {
+	public List<Menu> list() {
 		return menuRepo.findAll();
 	}
 

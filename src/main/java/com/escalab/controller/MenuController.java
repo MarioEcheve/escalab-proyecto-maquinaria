@@ -26,7 +26,7 @@ public class MenuController {
 	@GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<Menu>> listar() {
 		List<Menu> menues = new ArrayList<>();
-		menues = service.listar();
+		menues = service.list();
 		return new ResponseEntity<List<Menu>>(menues, HttpStatus.OK);
 	}
 	

@@ -1,5 +1,7 @@
 package com.escalab.service;
 
-public interface ITipoMaquinaService {
+import com.escalab.model.TipoMaquina;
+
+public interface ITipoMaquinaService extends ICRUD<TipoMaquina>{
 
 }

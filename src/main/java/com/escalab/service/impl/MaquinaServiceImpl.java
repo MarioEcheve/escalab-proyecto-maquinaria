@@ -1,6 +1,7 @@
 package com.escalab.service.impl;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,32 +18,29 @@ public class MaquinaServiceImpl implements IMaquinaService{
 	
 	@Override
 	public Maquina save(Maquina obj) {
-		// TODO Auto-generated method stub
-		return null;
+		return maquinaRepo.save(obj);
 	}
 
 	@Override
 	public Maquina update(Maquina obj) {
-		// TODO Auto-generated method stub
-		return null;
+		return maquinaRepo.save(obj);
 	}
 
 	@Override
-	public List<Maquina> listar() {
-		// TODO Auto-generated method stub
+	public List<Maquina> list() {
 		return maquinaRepo.findAll();
 	}
 
 	@Override
 	public Maquina findById(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
+		Optional<Maquina> op = maquinaRepo.findById(id);
+		return op.isPresent() ? op.get() : new Maquina();
 	}
 
 	@Override
 	public boolean delete(Integer id) {
-		// TODO Auto-generated method stub
-		return false;
+		maquinaRepo.deleteById(id);
+		return true;
 	}
 
 }
